@@ -5,7 +5,7 @@
 # The result csv will contains the domain, IP & Nameservers in each column
 
 # Give each column the relevant header titles
-echo "Domain Name,IP Address" > dig_cloud-bleed_domains.csv
+echo "Domain Name,IP Address" > domains-output.csv
 
 while read domain
 do
@@ -26,7 +26,7 @@ do
   # echo " "
 
   # Prints all the values fetched into the CSV file
-  echo -e "$domain,$ipaddress" >> dig_cloud-bleed_domains.csv
+  echo -e "$domain,$ipaddress" >> domains-output.csv
 
 # Defines the text file from which to read domain names
-done < my_cloud-bleed_domains.csv
+done < domains.csv
